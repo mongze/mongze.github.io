@@ -24,7 +24,8 @@ $grid-gutter: $base-spacing-unit;
   }
 }
 
-.o-grid__col {
+.o-grid__col,
+.disqus {
   float: left;
   padding-right: $grid-gutter;
   padding-left: $grid-gutter;
@@ -96,4 +97,9 @@ $grid-gutter: $base-spacing-unit;
   &--end {
     margin-left: auto;
   }
+}
+
+.disqus {
+  width: 100%;
+  margin-top: 50px;
 }
