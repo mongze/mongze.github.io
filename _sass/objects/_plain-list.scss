@@ -7,3 +7,59 @@
   padding: 0;
   list-style: none;
 }
+
+.category_list {
+  margin: 0;
+  padding: 10px 0 30px;
+  list-style: none;
+
+  .item {
+    font-size: 0;
+    line-height: 0;
+    &::before {
+      content: '';
+      display: inline-block;
+      width: 5px;
+      height: 5px;
+      margin: 10px 10px 0 0;
+      background-color: #777;
+      vertical-align: top;
+    }
+  }
+
+  .title {
+    display: inline-block;
+    margin: 0;
+    font-size: 0;
+    vertical-align: top;
+  }
+
+  .link {
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: normal;
+  }
+
+  .date {
+    display: inline-block;
+    font-size: 12px;
+    line-height: 26px;
+    font-style: normal;
+    color: #666;
+    vertical-align: top;
+    &::before {
+      content: '';
+      display: inline-block;
+      width: 1px;
+      height: 12px;
+      margin: 7px 9px 0;
+      background-color: #dedede;
+      vertical-align: top;
+    }
+  }
+}
+
+.point {
+  font-size: 26px;
+  color: $color-point;
+}

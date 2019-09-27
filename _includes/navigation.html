@@ -1,9 +1,21 @@
-{% for page in site.pages %}
-  {% unless page.name == '404.md' %}
-    {% if page.title %}
-      <li class='c-nav__item' role='presentation'>
-        <a class='c-nav__link' href='{{ page.url | prepend: site.baseurl }}'>{{ page.title }}</a>
-      </li>
-    {% endif %}
-  {% endunless %}
-{% endfor %}
+<li class='c-nav__item' role='presentation'>
+  <a class='c-nav__link' href='/'>Home</a>
+</li>
+<li class='c-nav__item' role='presentation'>
+  <a class='c-nav__link' href='/about.html'>About</a>
+</li>
+<li class='c-nav__item' role='presentation'>
+  <a class='c-nav__link' href='/category/Thinking'>Thinking</a>
+</li>
+<li class='c-nav__item' role='presentation'>
+  <a class='c-nav__link' href='/category/HTMLCSS'>HTML&CSS</a>
+</li>
+<li class='c-nav__item' role='presentation'>
+  <a class='c-nav__link' href='/category/Animation'>Animation</a>
+</li>
+<li class='c-nav__item' role='presentation'>
+  <a class='c-nav__link' href='/category/Accessibility'>Web Accessibility</a>
+</li>
+<li class='c-nav__item' role='presentation'>
+  <a class='c-nav__link' href='/category/Etc'>Etc</a>
+</li>

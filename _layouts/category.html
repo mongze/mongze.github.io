@@ -1,0 +1,37 @@
+---
+layout: default
+---
+
+<div class='o-wrapper'>
+  {% assign category = page.category | default: page.title %}
+  <div class='o-grid'>
+    <div class='o-grid__col'>
+      <h4 class="point">{{ category }} 카테고리의 글</h4>
+    </div>
+  </div>
+
+  <div class='o-grid'>
+    <div class="o-grid__col">
+      <ul class="category_list">
+        {% for post in site.categories[category] %}
+        <li class="item">
+          <h3 class="title">
+            <a href="{{ site.baseurl }}{{ post.url }}" class="link">{{ post.title }}</a>
+            <em class="date">{{ post.date | date_to_string }}</em>
+          </h3>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+
+  <div class='o-grid'>
+    {% for post in site.categories[category] %}
+    {% include post-card.liquid %}
+    {% endfor %}
+  </div>
+
+  <div class='o-grid'>
+    {% include pagination.html %}
+  </div>
+</div>
