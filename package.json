@@ -26,6 +26,7 @@
     "framer-motion": "^12.23.25",
     "globals": "^16.5.0",
     "lucide-react": "^0.556.0",
+    "react-confetti": "^6.4.0",
     "sass-embedded": "^1.96.0",
     "typescript": "~5.9.3",
     "typescript-eslint": "^8.46.4",

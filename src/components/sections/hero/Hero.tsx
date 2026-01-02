@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion } from "framer-motion";
+import Confetti from "react-confetti";
 import { Section } from "../../common";
 import "./Hero.scss";
 
@@ -22,42 +23,92 @@ export const Hero = ({
   floor,
   hall,
 }: HeroProps) => {
-  const [scrollY, setScrollY] = useState(0);
-  const { scrollYProgress } = useScroll();
-
-  // 스크롤에 따른 parallax 효과
-  const y = useTransform(scrollYProgress, [0, 1], [0, 300]);
-  const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
+  const [windowSize, setWindowSize] = useState({
+    width: window.innerWidth,
+    height: window.innerHeight,
+  });
+  const [showConfetti, setShowConfetti] = useState(false);
+  const [confettiOpacity, setConfettiOpacity] = useState(1);
 
   useEffect(() => {
-    const handleScroll = () => {
-      setScrollY(window.scrollY);
+    const handleResize = () => {
+      setWindowSize({
+        width: window.innerWidth,
+        height: window.innerHeight,
+      });
     };
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
   }, []);
+
+  useEffect(() => {
+    if (showConfetti) {
+      // 투명도를 1로 리셋
+      setConfettiOpacity(1);
+
+      // 6초 후 페이드아웃 시작
+      const fadeTimer = setTimeout(() => {
+        setConfettiOpacity(0);
+      }, 6000);
+
+      // 6초 후 confetti 완전히 제거
+      const removeTimer = setTimeout(() => {
+        setShowConfetti(false);
+      }, 6000);
+
+      return () => {
+        clearTimeout(fadeTimer);
+        clearTimeout(removeTimer);
+      };
+    }
+  }, [showConfetti]);
+
+  const handleClick = () => {
+    setShowConfetti(true);
+  };
 
   return (
     <Section className="hero" backgroundColor="#0a0909">
-      {/* Parallax 배경 이미지 */}
-      <motion.div
-        className="hero__background"
-        style={{
-          y,
-          opacity,
-        }}
-        aria-hidden="true"
-      />
+      {/* Confetti Effect */}
+      {showConfetti && (
+        <Confetti
+          width={windowSize.width}
+          height={windowSize.height}
+          numberOfPieces={200}
+          recycle={false}
+          colors={[
+            "#ed7a8c", // primary color
+            "#ecb3be", // secondary color
+            "#f4a5b3", // lighter pink
+            "#e0909e", // darker pink
+            "#ffffff", // white
+            "#ffd4db", // very light pink
+          ]}
+          style={{
+            position: "fixed",
+            top: 0,
+            left: 0,
+            zIndex: 100,
+            pointerEvents: "none",
+            opacity: confettiOpacity,
+            transition: "opacity 1s ease-out",
+          }}
+        />
+      )}
+
+      <div className="hero__background" aria-hidden="true" />
 
       <motion.div
         className="hero__content"
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, ease: "easeOut" }}
-        style={{
-          transform: `translateY(${scrollY * 0.5}px)`,
-        }}
+        onClick={handleClick}
+        style={{ cursor: "pointer" }}
       >
         <motion.h1
           className="hero__title"
