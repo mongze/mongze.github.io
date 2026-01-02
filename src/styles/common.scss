@@ -1,0 +1,102 @@
+// 공통 스타일
+@import "./variables";
+
+// ===== Body 스타일 =====
+body {
+  font-family: $font-primary;
+  font-size: 16px;
+  line-height: 1.5;
+  color: $text-dark;
+  background-color: $bg-dark;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.app {
+  width: 100%;
+  max-width: $container-width;
+  margin: 0 auto;
+}
+
+// ===== 스크롤바 스타일 =====
+// ::-webkit-scrollbar {
+//   width: 8px;
+// }
+
+// ::-webkit-scrollbar-track {
+//   background: #f1f1f1;
+// }
+
+// ::-webkit-scrollbar-thumb {
+//   background: $primary-color;
+//   border-radius: $border-radius-sm;
+
+//   &:hover {
+//     background: $primary-dark;
+//   }
+// }
+
+// Firefox 스크롤바
+// * {
+//   scrollbar-width: thin;
+//   scrollbar-color: $primary-color #f1f1f1;
+// }
+
+// ===== 선택 영역 스타일 =====
+::selection {
+  background-color: $primary-color;
+  color: $text-white;
+}
+
+::-moz-selection {
+  background-color: $primary-color;
+  color: $text-white;
+}
+
+// ===== 포커스 스타일 =====
+:focus-visible {
+  outline: 2px solid $primary-color;
+  outline-offset: 2px;
+}
+
+// ===== 유틸리티 클래스 =====
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+// ===== 애니메이션 헬퍼 =====
+@mixin transition($property: all) {
+  transition: $property 300ms ease;
+}
+
+@mixin fade-in {
+  animation: fadeIn 300ms ease forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

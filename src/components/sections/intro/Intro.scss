@@ -1,0 +1,55 @@
+.intro {
+  color: #0a0909;
+
+  &__content {
+    padding: 32px;
+  }
+
+  &__message {
+    text-align: center;
+    margin-bottom: 64px;
+    line-height: 1.8;
+    font-size: 16px;
+
+    p {
+      white-space: pre-line;
+    }
+  }
+
+  &__people {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+  }
+
+  &__person {
+    text-align: center;
+  }
+
+  &__label {
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 16px;
+    opacity: 0.7;
+  }
+
+  &__name {
+    font-size: 28px;
+    font-weight: 500;
+    margin-bottom: 8px;
+  }
+
+  &__english-name {
+    font-size: 16px;
+    opacity: 0.7;
+    margin-bottom: 16px;
+  }
+
+  &__parents {
+    font-size: 14px;
+    opacity: 0.8;
+    line-height: 1.6;
+  }
+}

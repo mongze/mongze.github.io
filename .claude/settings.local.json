@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install framer-motion lucide-react)",
+      "Bash(mkdir:*)",
+      "Bash(npm install:*)",
+      "Bash(pnpm add:*)",
+      "Bash(cat:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

@@ -1,0 +1,59 @@
+@use "../../../styles/variables.scss" as *;
+
+.share {
+  color: $text-white;
+  min-height: 50vh;
+
+  &__content {
+    padding: 48px;
+  }
+
+  &__title {
+    font-size: 24px;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    margin-bottom: 32px;
+    text-align: center;
+  }
+
+  &__buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: $container-width;
+    margin: 0 auto;
+  }
+
+  &__button {
+    justify-content: space-between;
+  }
+
+  &__kakao-button {
+    background-color: #fee500;
+    color: #3c1e1e;
+
+    &:hover:not(:disabled) {
+      background-color: darken(#fee500, 10%);
+    }
+  }
+
+  &__line-button {
+    background-color: #06c755;
+    color: $text-white;
+
+    &:hover:not(:disabled) {
+      background-color: darken(#06c755, 10%);
+    }
+  }
+
+  &__link-button,
+  &__native-button {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: $text-white;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+
+    &:hover:not(:disabled) {
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+  }
+}

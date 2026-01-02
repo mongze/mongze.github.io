@@ -1,0 +1,46 @@
+// 디자인 시스템 변수
+
+// ===== 색상 =====
+// 메인 컬러
+$primary-color: #ed7a8c;
+$primary-dark: darken($primary-color, 10%);
+$primary-light: lighten($primary-color, 10%);
+
+$secondary-color: #ecb3be;
+$secondary-dark: darken($secondary-color, 10%);
+$secondary-light: lighten($secondary-color, 10%);
+
+// 배경 색상
+$bg-dark: #0a0909;
+$bg-dark-gray: #181818;
+$bg-gray: #212121;
+$bg-light: #ecb3be;
+
+// 텍스트 색상
+$text-white: #ffffff;
+$text-dark: #0a0909;
+$text-gray: rgba(255, 255, 255, 0.8);
+
+// ===== 타이포그래피 =====
+// 폰트 패밀리
+$font-primary: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+  "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+
+// ===== 컨테이너 너비 =====
+$container-width: 500px; // 모바일 청첩장 고정 너비
+
+// ===== 그림자 =====
+$shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+$shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+$shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+$shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.15);
+
+// ===== 트랜지션 =====
+$transition-fast: 150ms ease;
+$transition-base: 300ms ease;
+$transition-slow: 500ms ease;
+
+// ===== Z-Index =====
+$z-index-dropdown: 100;
+$z-index-modal: 1000;
+$z-index-tooltip: 1100;

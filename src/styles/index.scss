@@ -1,0 +1,11 @@
+// 메인 스타일 파일
+// 모든 스타일을 순서대로 import
+
+// 1. Reset CSS
+@import './reset';
+
+// 2. Variables (변수 정의)
+@import './variables';
+
+// 3. Common styles (공통 스타일)
+@import './common';
