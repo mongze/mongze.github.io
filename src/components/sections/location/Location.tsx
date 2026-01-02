@@ -49,7 +49,7 @@ export const Location = ({ location }: LocationProps) => {
       naver: `https://map.naver.com/v5/search/${encodeURIComponent(name)}`,
     };
 
-    window.open(urls[type], "_blank");
+    window.open(urls[type], "_blank", "noopener,noreferrer");
   };
 
   const copyAddress = async () => {

@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import {
   Hero,
   Intro,
@@ -11,6 +12,13 @@ import { weddingData } from "./constants/weddingData";
 
 function App() {
   const { groom, bride, wedding, location, gallery, accounts } = weddingData;
+
+  // Kakao SDK 초기화
+  useEffect(() => {
+    if (window.Kakao && !window.Kakao.isInitialized()) {
+      window.Kakao.init("b86be947a6957265a3bd7265529725b9");
+    }
+  }, []);
 
   // 날짜 포맷팅
   const formatDate = (isoDate: string) => {
