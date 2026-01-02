@@ -31,8 +31,11 @@ jobs:
         with:
           version: 8
 
+      - name: Clean pnpm cache
+        run: pnpm store prune
+
       - name: Install dependencies
-        run: pnpm install
+        run: rm -rf node_modules pnpm-lock.yaml && pnpm install
 
       - name: Build
         run: pnpm run build

@@ -10,18 +10,15 @@ interface AccountProps {
 }
 
 export const Account = ({ accounts }: AccountProps) => {
-  const [copiedId, setCopiedId] = useState<string | null>(null);
   const [openAccordion, setOpenAccordion] = useState<string | null>("groom");
   const [showToast, setShowToast] = useState(false);
 
   const groomAccounts = accounts.filter((acc) => acc.type.startsWith("groom"));
   const brideAccounts = accounts.filter((acc) => acc.type.startsWith("bride"));
 
-  const copyToClipboard = (text: string, id: string) => {
+  const copyToClipboard = (text: string) => {
     navigator.clipboard.writeText(text);
-    setCopiedId(id);
     setShowToast(true);
-    setTimeout(() => setCopiedId(null), 2000);
   };
 
   const toggleAccordion = (id: string) => {
@@ -93,7 +90,7 @@ export const Account = ({ accounts }: AccountProps) => {
 
                   <button
                     className="account__copy-button"
-                    onClick={() => copyToClipboard(accountNumber, accountId)}
+                    onClick={() => copyToClipboard(accountNumber)}
                   >
                     <div className="account__copy-info">
                       <div className="account__bank">{account.bank}</div>
