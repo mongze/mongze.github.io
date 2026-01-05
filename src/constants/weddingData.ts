@@ -3,18 +3,14 @@ import type { WeddingData } from "../types";
 export const weddingData: WeddingData = {
   groom: {
     name: "신동욱",
-    englishName: "Dongwook Shin",
-    father: "아버지",
+    father: "신완수",
     order: "아들",
-    phone: "010-0000-0000",
   },
   bride: {
     name: "김은재",
-    englishName: "Eunjae Kim",
     father: "김선용",
     mother: "신형숙",
     order: "딸",
-    phone: "010-0000-0000",
   },
   wedding: {
     date: "2026-05-30T14:00:00",
@@ -181,7 +177,7 @@ export const weddingData: WeddingData = {
     },
     {
       type: "groom-father",
-      name: "신랑 아버지",
+      name: "신완수",
       bank: "신한은행",
       accountNumber: "110-222-333444",
     },

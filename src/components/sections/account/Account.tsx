@@ -10,7 +10,7 @@ interface AccountProps {
 }
 
 export const Account = ({ accounts }: AccountProps) => {
-  const [openAccordion, setOpenAccordion] = useState<string | null>("groom");
+  const [openAccordion, setOpenAccordion] = useState<string | null>(null);
   const [showToast, setShowToast] = useState(false);
 
   const groomAccounts = accounts.filter((acc) => acc.type.startsWith("groom"));

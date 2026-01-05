@@ -11,7 +11,6 @@ export interface WeddingData {
 
 export interface Person {
   name: string;
-  englishName?: string;
   father?: string;
   mother?: string;
   order?: string; // "장남", "차남", "장녀" 등

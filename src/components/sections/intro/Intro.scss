@@ -1,8 +1,10 @@
+@use "../../../styles/variables.scss" as *;
+
 .intro {
-  color: #0a0909;
+  color: $text-dark;
 
   &__content {
-    padding: 32px;
+    padding: 0 32px 32px;
   }
 
   &__message {
@@ -10,6 +12,15 @@
     margin-bottom: 64px;
     line-height: 1.8;
     font-size: 16px;
+
+    &::before {
+      content: "";
+      display: block;
+      width: 100px;
+      height: 100px;
+      margin: 0 auto 8px;
+      background: url(../../../assets/couple.png) 50% / cover no-repeat;
+    }
 
     p {
       white-space: pre-line;
@@ -39,12 +50,6 @@
     font-size: 28px;
     font-weight: 500;
     margin-bottom: 8px;
-  }
-
-  &__english-name {
-    font-size: 16px;
-    opacity: 0.7;
-    margin-bottom: 16px;
   }
 
   &__parents {

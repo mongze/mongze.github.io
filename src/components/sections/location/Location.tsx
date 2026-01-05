@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
-import { TrainFront, Bus, Car, Copy, Info } from "lucide-react";
+import { MapPin, TrainFront, Bus, Car, Copy, Info } from "lucide-react";
 import { Section, Button, Toast } from "../../common";
 import type { LocationInfo } from "../../../types";
 import "./Location.scss";
@@ -73,10 +73,10 @@ export const Location = ({ location }: LocationProps) => {
         <h2 className="location__title">Location</h2>
 
         <div className="location__venue">
-          <div className="location__venue-header">
-            <h3>{location.name}</h3>
-            {location.addressDetail && <p>{location.addressDetail}</p>}
-          </div>
+          <h3 className="location__venue-header">
+            <MapPin size={14} />
+            {location.name} {location.addressDetail}
+          </h3>
           <div className="location__address-container">
             <p className="location__address">{location.address}</p>
             <button

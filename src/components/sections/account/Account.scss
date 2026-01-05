@@ -5,10 +5,10 @@
 
   &__content {
     padding: 32px 16px;
+    text-align: center;
   }
 
   &__title {
-    text-align: center;
     font-size: 24px;
     font-weight: 400;
     letter-spacing: 0.1em;
@@ -16,20 +16,15 @@
   }
 
   &__description {
-    text-align: center;
     font-size: 16px;
-    // font-weight: 300;
-    // color: $text-muted;
     margin-bottom: 32px;
-    line-height: 1.8;
+    opacity: 0.8;
   }
 
   &__groups {
     display: flex;
     flex-direction: column;
     gap: 16px;
-    max-width: $container-width;
-    margin: 0 auto;
   }
 
   &__accordion {

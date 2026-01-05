@@ -35,7 +35,6 @@ export const Intro = ({ groom, bride, message }: IntroProps) => {
           >
             <h3 className="intro__label">신랑</h3>
             <p className="intro__name">{groom.name}</p>
-            {groom.englishName && <p className="intro__english-name">{groom.englishName}</p>}
             {(groom.father || groom.mother) && (
               <div className="intro__parents">
                 {groom.father && <span>{groom.father}</span>}
@@ -55,7 +54,6 @@ export const Intro = ({ groom, bride, message }: IntroProps) => {
           >
             <h3 className="intro__label">신부</h3>
             <p className="intro__name">{bride.name}</p>
-            {bride.englishName && <p className="intro__english-name">{bride.englishName}</p>}
             {(bride.father || bride.mother) && (
               <div className="intro__parents">
                 {bride.father && <span>{bride.father}</span>}

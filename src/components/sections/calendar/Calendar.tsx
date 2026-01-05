@@ -48,8 +48,8 @@ export const Calendar = ({ weddingData }: CalendarProps) => {
 
   const formatDate = (date: Date) => {
     const year = date.getFullYear();
-    const month = String(date.getMonth() + 1).padStart(2, "0");
-    const day = String(date.getDate()).padStart(2, "0");
+    const month = String(date.getMonth() + 1);
+    const day = String(date.getDate());
     const dayOfWeek = ["일", "월", "화", "수", "목", "금", "토"][date.getDay()];
 
     return {
@@ -124,7 +124,9 @@ export const Calendar = ({ weddingData }: CalendarProps) => {
             <MapPin size={14} />
             {weddingData.location.name} {weddingData.location.addressDetail}
             <br />
-            <span className="calendar__venue-address">{weddingData.location.address}</span>
+            <span className="calendar__venue-address">
+              {weddingData.location.address}
+            </span>
           </div>
         </motion.div>
 
