@@ -110,7 +110,7 @@ export const Account = ({ accounts }: AccountProps) => {
   };
 
   return (
-    <Section className="account" backgroundColor="#ecb3be">
+    <Section className="account">
       <motion.div
         className="account__content"
         initial={{ opacity: 0 }}

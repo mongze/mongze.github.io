@@ -88,7 +88,7 @@ export const Calendar = ({ weddingData }: CalendarProps) => {
   const { calendar: calendarDays, weddingDay } = generateCalendar();
 
   return (
-    <Section className="calendar" backgroundColor="#0a0909">
+    <Section className="calendar">
       <motion.div
         className="calendar__content"
         initial={{ opacity: 0 }}

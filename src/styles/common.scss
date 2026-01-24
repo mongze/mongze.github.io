@@ -7,7 +7,9 @@ body {
   font-size: 16px;
   line-height: 1.5;
   color: $text-dark;
-  background-color: $bg-dark;
+  // background-color: rgba(#fff, 0.6);
+  // background-image: url(../assets/paper2.jpg);
+  // background-blend-mode: lighten;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

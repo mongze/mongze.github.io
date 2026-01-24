@@ -1,42 +1,19 @@
 @use "../../../styles/variables.scss" as *;
 
 .hero {
-  color: $text-white;
+  // color: $text-white;
+  color: $color-5;
   position: relative;
   overflow: hidden;
-
-  &__background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: url(../../../assets/intro.jpg) 55% 50% / cover no-repeat;
-    z-index: 0;
-
-    &::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background-image: linear-gradient(
-        to bottom,
-        transparent,
-        rgba(10, 9, 9, 0.5)
-      );
-      z-index: 1;
-    }
-  }
 
   &__content {
     position: relative;
     z-index: 2;
     display: flex;
     flex-direction: column;
-    height: 100dvh;
-    padding: 32px 32px 64px;
+    // height: 100dvh;
+    height: 80%;
+    padding: 0 0 32px;
     text-align: center;
     box-sizing: border-box;
     -webkit-tap-highlight-color: transparent;
@@ -46,41 +23,63 @@
     }
   }
 
+  &__badge {
+    display: inline-block;
+    margin-bottom: -8px;
+    font-size: 12px;
+    letter-spacing: -0.1px;
+
+    &::before {
+      content: "";
+      display: block;
+      width: 73.75px;
+      height: 35.83px;
+      margin: 0 auto 4px;
+      background: url("../../../assets/birds.png") 50% / cover no-repeat;
+    }
+  }
+
   &__title {
-    margin: 22% 0 auto;
-    font-size: 32px;
-    font-weight: 300;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
+    // margin: 24px 0;
+    font-size: 52px;
+    // font-weight: 300;
+    // letter-spacing: 0.2em;
+    // text-transform: uppercase;
+    font-family: "Calligraphy", serif;
+
+    @media screen and (max-width: 414px) {
+      font-size: 38px;
+    }
+  }
+
+  &__image {
+    aspect-ratio: 3 / 4;
+    width: 56%;
+    margin: 8px auto 8px;
+  }
+
+  &__sub {
+    font-family: "Calligraphy", serif;
+    font-size: 16px;
+    font-weight: 700;
   }
 
   &__names {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    margin: 0 32px 30%;
+    justify-content: center;
+    gap: 0 4px;
   }
 
-  &__name {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    &-title {
-      font-size: 12px;
-      opacity: 0.8;
-    }
-
-    &-text {
-      margin-top: 4px;
-      font-size: 16px;
-      font-weight: 700;
-    }
+  &__name-text {
+    font-size: 16px;
+    font-weight: 700;
   }
 
   &__details {
-    font-size: 16px;
-    line-height: 1.8;
+    margin-top: 16px;
+    font-size: 14px;
+    line-height: 1.4;
   }
 
   &__date {
@@ -88,6 +87,7 @@
     align-items: center;
     justify-content: center;
     gap: 0 4px;
+    opacity: 0.8;
   }
 
   &__venue {

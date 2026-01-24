@@ -83,7 +83,7 @@ export const Share = () => {
   };
 
   return (
-    <Section className="share" backgroundColor="#0a0909">
+    <Section className="share">
       <motion.div
         className="share__content"
         initial={{ opacity: 0 }}

@@ -20,7 +20,7 @@ export const Gallery = ({ images }: GalleryProps) => {
     : images.slice(0, INITIAL_DISPLAY_COUNT);
 
   return (
-    <Section className="gallery" backgroundColor="#181818">
+    <Section className="gallery">
       <motion.div
         className="gallery__content"
         initial={{ opacity: 0 }}
@@ -28,7 +28,7 @@ export const Gallery = ({ images }: GalleryProps) => {
         viewport={{ once: true }}
         transition={{ duration: 0.8 }}
       >
-        <h2 className="gallery__title">Gallery</h2>
+        <h2 className="gallery__title sr-only">Gallery</h2>
 
         <div className="gallery__grid">
           <AnimatePresence>

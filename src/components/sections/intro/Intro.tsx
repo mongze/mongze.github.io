@@ -1,7 +1,7 @@
-import { motion } from 'framer-motion';
-import { Section } from '../../common';
-import type { Person } from '../../../types';
-import './Intro.scss';
+import { motion } from "framer-motion";
+import { Section } from "../../common";
+import type { Person } from "../../../types";
+import "./Intro.scss";
 
 interface IntroProps {
   groom: Person;
@@ -11,7 +11,7 @@ interface IntroProps {
 
 export const Intro = ({ groom, bride, message }: IntroProps) => {
   return (
-    <Section className="intro" backgroundColor="#ecb3be">
+    <Section className="intro">
       <motion.div
         className="intro__content"
         initial={{ opacity: 0, y: 30 }}

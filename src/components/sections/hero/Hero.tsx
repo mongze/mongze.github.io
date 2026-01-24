@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import Confetti from "react-confetti";
 import { Section } from "../../common";
+import Intro from "../../../assets/intro.jpg";
 import "./Hero.scss";
 
 interface HeroProps {
@@ -72,7 +73,7 @@ export const Hero = ({
   };
 
   return (
-    <Section className="hero" backgroundColor="#0a0909">
+    <Section className="hero">
       {/* Confetti Effect */}
       {showConfetti && (
         <Confetti
@@ -100,8 +101,6 @@ export const Hero = ({
         />
       )}
 
-      <div className="hero__background" aria-hidden="true" />
-
       <motion.div
         className="hero__content"
         initial={{ opacity: 0, y: 30 }}
@@ -110,29 +109,37 @@ export const Hero = ({
         onClick={handleClick}
         style={{ cursor: "pointer" }}
       >
+        <motion.div className="hero__badge">WEDDING DAY</motion.div>
         <motion.h1
           className="hero__title"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.3, duration: 1 }}
         >
-          Save the Date
+          Eunjae & Dongwook
         </motion.h1>
 
+        <motion.div className="hero__image">
+          <motion.img
+            src={Intro}
+            alt=""
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.4, duration: 0.8 }}
+          />
+        </motion.div>
+
         <motion.div
-          className="hero__names"
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
           transition={{ delay: 0.6, duration: 0.8 }}
         >
-          <span className="hero__name">
-            <span className="hero__name-title">신부</span>
+          {/* <div className="hero__sub">Save the date</div> */}
+          <div className="hero__names">
             <span className="hero__name-text">{brideName}</span>
-          </span>
-          <span className="hero__name">
-            <span className="hero__name-title">신랑</span>
+            <span className="hero__name-text">&</span>
             <span className="hero__name-text">{groomName}</span>
-          </span>
+          </div>
         </motion.div>
 
         <motion.div

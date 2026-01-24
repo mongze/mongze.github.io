@@ -1,5 +1,14 @@
 // 디자인 시스템 변수
 
+// ===== 웹폰트 =====
+@font-face {
+  font-family: 'Calligraphy';
+  src: url('../assets/Calligraphy.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 // ===== 색상 =====
 // 메인 컬러
 $primary-color: #ed7a8c;
@@ -9,6 +18,12 @@ $primary-light: lighten($primary-color, 10%);
 $secondary-color: #ecb3be;
 $secondary-dark: darken($secondary-color, 10%);
 $secondary-light: lighten($secondary-color, 10%);
+
+$color-1: rgb(246, 243, 236);
+$color-2: rgb(236, 228, 218);
+$color-3: rgb(172, 156, 140);
+$color-4: rgb(107, 99, 90);
+$color-5: rgb(37, 34, 31);
 
 // 배경 색상
 $bg-dark: #0a0909;

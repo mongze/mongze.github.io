@@ -62,7 +62,7 @@ export const Location = ({ location }: LocationProps) => {
   };
 
   return (
-    <Section className="location" backgroundColor="#212121">
+    <Section className="location">
       <motion.div
         className="location__content"
         initial={{ opacity: 0 }}
