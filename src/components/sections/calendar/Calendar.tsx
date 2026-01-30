@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { MapPin } from "lucide-react";
 import { Section } from "../../common";
 import type { WeddingData } from "../../../types";
 import "./Calendar.scss";
@@ -60,7 +59,7 @@ export const Calendar = ({ weddingData }: CalendarProps) => {
     };
   };
 
-  const { year, month, day, dayOfWeek } = formatDate(weddingDate);
+  formatDate(weddingDate);
 
   // 2026년 5월 달력 데이터 생성
   const generateCalendar = () => {
