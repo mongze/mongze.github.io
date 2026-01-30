@@ -45,21 +45,21 @@ body {
 // }
 
 // ===== 선택 영역 스타일 =====
-::selection {
-  background-color: $primary-color;
-  color: $text-white;
-}
+// ::selection {
+//   background-color: $primary-color;
+//   color: $text-white;
+// }
 
-::-moz-selection {
-  background-color: $primary-color;
-  color: $text-white;
-}
+// ::-moz-selection {
+//   background-color: $primary-color;
+//   color: $text-white;
+// }
 
-// ===== 포커스 스타일 =====
-:focus-visible {
-  outline: 2px solid $primary-color;
-  outline-offset: 2px;
-}
+// // ===== 포커스 스타일 =====
+// :focus-visible {
+//   outline: 2px solid $primary-color;
+//   outline-offset: 2px;
+// }
 
 // ===== 유틸리티 클래스 =====
 .sr-only {

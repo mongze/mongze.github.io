@@ -2,8 +2,16 @@
 
 // ===== 웹폰트 =====
 @font-face {
-  font-family: 'Calligraphy';
-  src: url('../assets/Calligraphy.otf') format('opentype');
+  font-family: "Calligraphy";
+  src: url("../assets/Calligraphy.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Charen";
+  src: url("../assets/Charen.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -19,7 +27,7 @@ $secondary-color: #ecb3be;
 $secondary-dark: darken($secondary-color, 10%);
 $secondary-light: lighten($secondary-color, 10%);
 
-$color-1: rgb(246, 243, 236);
+$color-1: rgb(245, 241, 237);
 $color-2: rgb(236, 228, 218);
 $color-3: rgb(172, 156, 140);
 $color-4: rgb(107, 99, 90);

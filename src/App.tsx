@@ -2,6 +2,8 @@ import { useEffect } from "react";
 import {
   Hero,
   Intro,
+  ColumnGallery,
+  SingleGallery,
   Calendar,
   Gallery,
   Location,
@@ -51,6 +53,14 @@ function App() {
         hall={wedding.hall || ""}
       />
       <Intro groom={groom} bride={bride} message={introMessage} />
+      <ColumnGallery
+        images={[
+          "https://via.placeholder.com/400x500/f5f1ed/333?text=Image+1",
+          "https://via.placeholder.com/400x500/f5f1ed/333?text=Image+2",
+          "https://via.placeholder.com/400x500/f5f1ed/333?text=Image+3",
+        ]}
+      />
+      <SingleGallery />
       <Calendar weddingData={weddingData} />
       <Gallery images={gallery} />
       <Location location={location} />

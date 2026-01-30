@@ -114,7 +114,7 @@ export const Hero = ({
           className="hero__title"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: 0.3, duration: 1 }}
+          transition={{ delay: 0.2, duration: 1 }}
         >
           Eunjae & Dongwook
         </motion.h1>
@@ -133,20 +133,18 @@ export const Hero = ({
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.6, duration: 0.8 }}
+          className="hero__names"
         >
-          {/* <div className="hero__sub">Save the date</div> */}
-          <div className="hero__names">
-            <span className="hero__name-text">{brideName}</span>
-            <span className="hero__name-text">&</span>
-            <span className="hero__name-text">{groomName}</span>
-          </div>
+          <span className="hero__name-text">{brideName}</span>
+          <span className="hero__name-text">&</span>
+          <span className="hero__name-text">{groomName}</span>
         </motion.div>
 
         <motion.div
           className="hero__details"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: 0.9, duration: 1 }}
+          transition={{ delay: 0.8, duration: 1 }}
         >
           <p className="hero__date">
             <span>{date}</span>

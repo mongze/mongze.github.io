@@ -103,32 +103,8 @@ export const Calendar = ({ weddingData }: CalendarProps) => {
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
-          Wedding Day
+          May
         </motion.h2>
-
-        <motion.div
-          className="calendar__date-info"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-        >
-          <div className="calendar__date">
-            <div className="calendar__date-text">
-              {year}년 {month}월 {day}일 {dayOfWeek}요일{" "}
-              {weddingData.wedding.time}
-            </div>
-          </div>
-
-          <div className="calendar__venue">
-            <MapPin size={14} />
-            {weddingData.location.name} {weddingData.location.addressDetail}
-            <br />
-            <span className="calendar__venue-address">
-              {weddingData.location.address}
-            </span>
-          </div>
-        </motion.div>
 
         <motion.div
           className="calendar__grid-container"

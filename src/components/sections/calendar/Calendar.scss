@@ -4,55 +4,20 @@
   // color: $text-white;
 
   &__content {
-    padding: 32px;
     text-align: center;
     max-width: $container-width;
     margin: 0 auto;
   }
 
   &__title {
-    font-size: 24px;
-    font-weight: 400;
+    font-size: 28px;
+    font-weight: 700;
     letter-spacing: 0.1em;
-    margin-bottom: 48px;
-  }
-
-  &__date-info {
-    border-radius: 16px;
-  }
-
-  &__date {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 16px;
-    padding-bottom: 24px;
-  }
-
-  &__date-text {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    font-size: 16px;
-  }
-
-  &__venue {
-    font-size: 16px;
-
-    svg {
-      display: inline-flex;
-      margin-right: 4px;
-      opacity: 0.7;
-    }
-  }
-
-  &__venue-address {
-    opacity: 0.6;
-    font-size: 14px;
+    font-family: "Charen", serif;
   }
 
   &__grid-container {
-    margin: 32px 0 24px;
+    margin: 16px 56px 24px;
     padding: 16px 0;
     border: 1px solid #e1e1e1;
     border-width: 1px 0;

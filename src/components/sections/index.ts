@@ -1,5 +1,7 @@
 export { Hero } from './hero/Hero';
 export { Intro } from './intro/Intro';
+export { ColumnGallery } from './columngallery/ColumnGallery';
+export { SingleGallery } from './singlegallery/SingleGallery';
 export { Calendar } from './calendar/Calendar';
 export { Gallery } from './gallery/Gallery';
 export { Location } from './location/Location';
