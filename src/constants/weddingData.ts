@@ -1,4 +1,16 @@
 import type { WeddingData } from "../types";
+import image4 from "@/assets/image4.webp";
+import image5 from "@/assets/image5.webp";
+import image6 from "@/assets/image6.webp";
+import image7 from "@/assets/image7.webp";
+import image8 from "@/assets/image8.webp";
+import image9 from "@/assets/image9.webp";
+import image10 from "@/assets/image10.webp";
+import image11 from "@/assets/image11.webp";
+import image12 from "@/assets/image12.webp";
+import image13 from "@/assets/image13.webp";
+import image14 from "@/assets/image14.webp";
+import image15 from "@/assets/image15.webp";
 
 export const weddingData: WeddingData = {
   groom: {
@@ -66,73 +78,73 @@ export const weddingData: WeddingData = {
   gallery: [
     {
       id: "1",
-      url: "src/assets/image7.webp",
+      url: image7,
       alt: "",
       order: 1,
     },
     {
       id: "2",
-      url: "src/assets/image5.webp",
+      url: image5,
       alt: "",
       order: 2,
     },
     {
       id: "3",
-      url: "src/assets/image6.webp",
+      url: image6,
       alt: "",
       order: 3,
     },
     {
       id: "4",
-      url: "src/assets/image4.webp",
+      url: image4,
       alt: "",
       order: 4,
     },
     {
       id: "5",
-      url: "src/assets/image8.webp",
+      url: image8,
       alt: "",
       order: 5,
     },
     {
       id: "6",
-      url: "src/assets/image9.webp",
+      url: image9,
       alt: "",
       order: 6,
     },
     {
       id: "7",
-      url: "src/assets/image10.webp",
+      url: image10,
       alt: "",
       order: 7,
     },
     {
       id: "8",
-      url: "src/assets/image11.webp",
+      url: image11,
       alt: "",
       order: 8,
     },
     {
       id: "9",
-      url: "src/assets/image12.webp",
+      url: image12,
       alt: "",
       order: 9,
     },
     {
       id: "10",
-      url: "src/assets/image13.webp",
+      url: image13,
       alt: "",
       order: 10,
     },
     {
       id: "11",
-      url: "src/assets/image14.webp",
+      url: image14,
       alt: "",
       order: 11,
     },
     {
       id: "12",
-      url: "src/assets/image15.webp",
+      url: image15,
       alt: "",
       order: 12,
     },
