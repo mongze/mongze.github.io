@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import Confetti from "react-confetti";
 import { Section } from "../../common";
-import Intro from "../../../assets/intro.jpg";
+import Intro from "../../../assets/intro.webp";
 import "./Hero.scss";
 
 interface HeroProps {

@@ -21,7 +21,7 @@ export const Share = () => {
     try {
       // 현재 페이지의 절대 URL 생성
       const currentUrl = window.location.origin + window.location.pathname;
-      const imageUrl = `${window.location.origin}/intro.jpg`;
+      const imageUrl = `${window.location.origin}/intro.webp`;
 
       window.Kakao.Share.sendDefault({
         objectType: "feed",

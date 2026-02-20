@@ -1,4 +1,4 @@
-import type { WeddingData } from "../types";
+import type { WeddingData } from "src/types";
 
 export const weddingData: WeddingData = {
   groom: {
@@ -35,7 +35,7 @@ export const weddingData: WeddingData = {
     bus: [
       {
         description:
-          "이매촌(한신아파트 앞) 정류장 하차: 2, 33, 55-1, 116, 222, 303, 380, 720-2, 102, 303, 1001, 1005-1, 1151, 1500, 1500-2, 3330, 3500, 5500-1, 7007-1, 7200, 8130, 8131, 8133, 8151, 9000, 9001, 9005, 9401, 9403, 9407, 4102, 4000, 8106, 8109",
+          "이매촌(한신아파트 앞) 정류장 하차: 2, 33, 55-1, 116, 222, 303, 380, 720-2, 102, 1001, 1005-1, 1151, 1500, 1500-2, 3330, 3500, 5500-1, 7007-1, 7200, 8130, 8131, 8133, 8151, 9000, 9001, 9005, 9401, 9403, 9407, 4102, 4000, 8106, 8109",
       },
       {
         description: "AK플라자(분당우체국 앞) 정류장 하차: 116, 222, 310, 3500",
@@ -49,7 +49,7 @@ export const weddingData: WeddingData = {
       available: true,
       description: [
         "판교 톨게이트 2.5km 직진 5분소요",
-        "웨딩홀 건물 4~7F, 9F, 옥외주차장 이용",
+        "웨딩홀 건물 4~7F, 9F 주차장 이용",
         "무료 주차 2시간 30분",
       ],
     },
@@ -66,145 +66,107 @@ export const weddingData: WeddingData = {
   gallery: [
     {
       id: "1",
-      url: "https://placehold.co/900x1600",
-      alt: "갤러리 이미지 1",
+      url: "src/assets/image7.webp",
+      alt: "",
       order: 1,
     },
     {
       id: "2",
-      url: "https://placehold.co/900x1600",
-      alt: "갤러리 이미지 2",
+      url: "src/assets/image5.webp",
+      alt: "",
       order: 2,
     },
     {
       id: "3",
-      url: "https://placehold.co/900x1600",
-      alt: "갤러리 이미지 3",
+      url: "src/assets/image6.webp",
+      alt: "",
       order: 3,
     },
     {
       id: "4",
-      url: "https://placehold.co/900x1600",
-      alt: "갤러리 이미지 4",
+      url: "src/assets/image4.webp",
+      alt: "",
       order: 4,
     },
     {
       id: "5",
-      url: "https://placehold.co/900x1600",
-      alt: "갤러리 이미지 5",
+      url: "src/assets/image8.webp",
+      alt: "",
       order: 5,
     },
     {
       id: "6",
-      url: "https://placehold.co/900x1600",
-      alt: "갤러리 이미지 6",
+      url: "src/assets/image9.webp",
+      alt: "",
       order: 6,
     },
     {
       id: "7",
-      url: "https://placehold.co/900x1600",
-      alt: "갤러리 이미지 7",
+      url: "src/assets/image10.webp",
+      alt: "",
       order: 7,
     },
     {
       id: "8",
-      url: "https://placehold.co/900x1600",
-      alt: "갤러리 이미지 8",
+      url: "src/assets/image11.webp",
+      alt: "",
       order: 8,
     },
     {
       id: "9",
-      url: "https://placehold.co/900x1600",
-      alt: "갤러리 이미지 9",
+      url: "src/assets/image12.webp",
+      alt: "",
       order: 9,
     },
     {
       id: "10",
-      url: "https://placehold.co/900x1600",
-      alt: "갤러리 이미지 10",
+      url: "src/assets/image13.webp",
+      alt: "",
       order: 10,
     },
     {
       id: "11",
-      url: "https://placehold.co/900x1600",
-      alt: "갤러리 이미지 11",
+      url: "src/assets/image14.webp",
+      alt: "",
       order: 11,
     },
     {
       id: "12",
-      url: "https://placehold.co/900x1600",
-      alt: "갤러리 이미지 12",
+      url: "src/assets/image15.webp",
+      alt: "",
       order: 12,
-    },
-    {
-      id: "13",
-      url: "https://placehold.co/900x1600",
-      alt: "갤러리 이미지 13",
-      order: 13,
-    },
-    {
-      id: "14",
-      url: "https://placehold.co/900x1600",
-      alt: "갤러리 이미지 14",
-      order: 14,
-    },
-    {
-      id: "15",
-      url: "https://placehold.co/900x1600",
-      alt: "갤러리 이미지 15",
-      order: 15,
-    },
-    {
-      id: "16",
-      url: "https://placehold.co/900x1600",
-      alt: "갤러리 이미지 16",
-      order: 16,
-    },
-    {
-      id: "17",
-      url: "https://placehold.co/900x1600",
-      alt: "갤러리 이미지 17",
-      order: 17,
-    },
-    {
-      id: "18",
-      url: "https://placehold.co/900x1600",
-      alt: "갤러리 이미지 18",
-      order: 18,
     },
   ],
   accounts: [
     {
       type: "groom",
       name: "신동욱",
-      bank: "국민은행",
-      accountNumber: "123-456-7890",
-      kakaoPayUrl: "",
+      bank: "신한은행",
+      accountNumber: "110-323-654808",
     },
     {
       type: "groom-father",
       name: "신완수",
-      bank: "신한은행",
-      accountNumber: "110-222-333444",
+      bank: "하나은행",
+      accountNumber: "705-910526-49207",
     },
     {
       type: "bride",
       name: "김은재",
       bank: "케이뱅크",
       accountNumber: "100-190-350049",
-      kakaoPayUrl: "",
     },
     {
       type: "bride-father",
       name: "김선용",
-      bank: "농협은행",
-      accountNumber: "356-0123-4567-89",
+      bank: "국민은행",
+      accountNumber: "018-21-0864-820",
     },
     {
       type: "bride-mother",
       name: "신형숙",
-      bank: "하나은행",
-      accountNumber: "123-456789-01234",
+      bank: "국민은행",
+      accountNumber: "810-24-0340-294",
     },
   ],
 };

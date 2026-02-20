@@ -18,15 +18,26 @@
 
   &__gallery {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 32% 32% 1fr;
     gap: 20px;
   }
 
   &__image-wrapper {
     overflow: hidden;
+    position: relative;
     aspect-ratio: 3 / 4;
     background-color: #fff;
     cursor: pointer;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      border: 1px solid rgba(#111, 0.2);
+    }
   }
 
   &__image {

@@ -3,7 +3,6 @@ import {
   Hero,
   Intro,
   ColumnGallery,
-  SingleGallery,
   Calendar,
   Gallery,
   Location,
@@ -11,6 +10,9 @@ import {
   Share,
 } from "./components/sections";
 import { weddingData } from "./constants/weddingData";
+import Image1 from "./assets/image1.webp";
+import Image2 from "./assets/image2.webp";
+import Image3 from "./assets/image3.webp";
 
 function App() {
   const { groom, bride, wedding, location, gallery, accounts } = weddingData;
@@ -39,7 +41,7 @@ function App() {
   새로운 인생의 첫걸음을 시작하려 합니다. 
   
   귀한 걸음 하시어 저희의 아름다운 약속을 
-  따뜻하게 축복해 주시면 감사하겠습니다.`;
+  따뜻하게 축복해 주세요.`;
 
   return (
     <div className="app">
@@ -53,14 +55,7 @@ function App() {
         hall={wedding.hall || ""}
       />
       <Intro groom={groom} bride={bride} message={introMessage} />
-      <ColumnGallery
-        images={[
-          "https://via.placeholder.com/400x500/f5f1ed/333?text=Image+1",
-          "https://via.placeholder.com/400x500/f5f1ed/333?text=Image+2",
-          "https://via.placeholder.com/400x500/f5f1ed/333?text=Image+3",
-        ]}
-      />
-      <SingleGallery />
+      <ColumnGallery images={[Image1, Image2, Image3]} />
       <Calendar weddingData={weddingData} />
       <Gallery images={gallery} />
       <Location location={location} />
