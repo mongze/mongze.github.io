@@ -14,7 +14,7 @@ interface GalleryProps {
 }
 
 export const Gallery = ({ images }: GalleryProps) => {
-  const [selectedImage, setSelectedImage] = useState<GalleryImage | null>(null);
+  const [selectedImageIndex, setSelectedImageIndex] = useState<number | null>(null);
 
   return (
     <Section className="gallery">
@@ -40,11 +40,11 @@ export const Gallery = ({ images }: GalleryProps) => {
             navigation={true}
             className="gallery__swiper"
           >
-            {images.map((image) => (
+            {images.map((image, index) => (
               <SwiperSlide key={image.id}>
                 <div
                   className="gallery__slide"
-                  onClick={() => setSelectedImage(image)}
+                  onClick={() => setSelectedImageIndex(index)}
                 >
                   <img src={image.url} alt={image.alt} loading="lazy" />
                 </div>
@@ -54,11 +54,11 @@ export const Gallery = ({ images }: GalleryProps) => {
         </div>
       </motion.div>
 
-      {selectedImage && (
+      {selectedImageIndex !== null && (
         <ImageModal
-          imageUrl={selectedImage.url}
-          alt={selectedImage.alt}
-          onClose={() => setSelectedImage(null)}
+          images={images.map((img) => ({ url: img.url, alt: img.alt }))}
+          initialIndex={selectedImageIndex}
+          onClose={() => setSelectedImageIndex(null)}
         />
       )}
     </Section>

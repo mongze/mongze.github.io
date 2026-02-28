@@ -14,7 +14,7 @@ export const ColumnGallery = ({
   subtitle = "( WEDDING )",
   description = "HAND IN HAND, HEART TO HEART, FOREVER AND ALWAYS. TOGETHER IN LOVE, TOGETHER IN LIFE.",
 }: ColumnGalleryProps) => {
-  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  const [selectedImageIndex, setSelectedImageIndex] = useState<number | null>(null);
 
   return (
     <Section className="columngallery">
@@ -36,7 +36,7 @@ export const ColumnGallery = ({
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1, duration: 0.6 }}
-              onClick={() => setSelectedImage(image)}
+              onClick={() => setSelectedImageIndex(index)}
             >
               <img src={image} alt="" className="columngallery__image" />
             </motion.div>
@@ -54,11 +54,11 @@ export const ColumnGallery = ({
         </motion.p>
       </motion.div>
 
-      {selectedImage && (
+      {selectedImageIndex !== null && (
         <ImageModal
-          imageUrl={selectedImage}
-          alt=""
-          onClose={() => setSelectedImage(null)}
+          images={[{ url: images[selectedImageIndex], alt: "" }]}
+          initialIndex={0}
+          onClose={() => setSelectedImageIndex(null)}
         />
       )}
     </Section>
