@@ -57,7 +57,7 @@ export const ImageModal = ({ images, initialIndex, onClose }: ImageModalProps) =
           onSlideChange={(swiper: SwiperType) => {
             setCurrentIndex(swiper.realIndex);
           }}
-          onClick={(swiper: SwiperType, e: MouseEvent) => {
+          onClick={(_, e) => {
             e.stopPropagation();
           }}
         >
